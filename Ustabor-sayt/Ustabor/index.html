@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="uz"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ustabor — kerakli ustani toping</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f7;--card:#fff;--ink:#10263b;--mut:#5d6f80;--line:#dde4ea;--y:#ffc72c;--yi:#10263b;--ok:#1f9d6b;--blue:#2d6cdf;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1824;--card:#15283a;--ink:#eaf1f7;--mut:#9fb2c3;--line:#26405a;--yi:#0d1824}}
+:root[data-theme=dark]{--bg:#0d1824;--card:#15283a;--ink:#eaf1f7;--mut:#9fb2c3;--line:#26405a;--yi:#0d1824}
+*{box-sizing:border-box}html,body{height:auto;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:500 15px/1.6 Manrope,system-ui,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.w{max-width:1160px;margin:auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;gap:14px;height:62px}
+.logo{font:800 20px Unbounded,sans-serif;letter-spacing:-1px;margin-right:auto;cursor:pointer;background:none;border:0;display:flex;align-items:center;gap:8px}
+.logo i{width:30px;height:30px;border-radius:8px;background:var(--y);display:grid;place-items:center;font-style:normal;font-size:17px;transform:rotate(-8deg)}
+nav{display:flex;gap:4px}nav button{border:0;background:none;padding:8px 14px;border-radius:10px;font-weight:700;color:var(--mut)}
+nav button.on{background:var(--y);color:#10263b}nav b{background:var(--ink);color:var(--bg);border-radius:20px;padding:0 7px;font-size:11px;margin-left:5px}
+.hero{background:var(--y);color:#10263b;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:auto 0 0 0;height:14px;background:repeating-linear-gradient(-45deg,#10263b 0 18px,transparent 18px 36px)}
+.hero .w{padding-top:64px;padding-bottom:88px;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+h1{font:800 clamp(34px,5.4vw,62px)/1.04 Unbounded,sans-serif;letter-spacing:-2.5px;margin:0 0 18px}
+.hero p{font-size:17px;max-width:480px;margin:0 0 26px;font-weight:600}
+.sb{display:flex;background:#fff;border-radius:16px;padding:6px;box-shadow:0 10px 0 #10263b;max-width:520px}
+.sb input{flex:1;border:0;background:none;padding:12px 14px;font-size:16px;min-width:0;color:#10263b}.sb input:focus-visible{outline:0}
+.sb button,.btn{border:0;background:#10263b;color:#fff;border-radius:11px;padding:11px 20px;font-weight:800}
+.btn.y{background:var(--y);color:#10263b}.btn.g{background:none;border:1.5px solid var(--line);color:var(--ink)}.btn.ok{background:var(--ok)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stats div{background:#10263b;color:#fff;border-radius:18px;padding:20px}.stats div:nth-child(2){background:#fff;color:#10263b;transform:translateY(18px)}
+.stats strong{font:800 34px Unbounded,sans-serif;display:block;letter-spacing:-1px}.stats span{font-size:13px;opacity:.8}
+section.s{padding:44px 0 8px}h2{font:800 26px Unbounded,sans-serif;letter-spacing:-1px;margin:0 0 6px}.sub{color:var(--mut);margin:0 0 20px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{border:1.5px solid var(--line);background:var(--card);border-radius:30px;padding:8px 16px;font-weight:700}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;text-align:left;padding:0;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 0 -6px var(--y)}
+.ph{height:170px;position:relative;overflow:hidden}.av{overflow:hidden}.mono{width:100%;height:100%;display:grid;place-items:center;color:#10263b;font:800 24px Unbounded,sans-serif;letter-spacing:-1px;position:relative}.mono:after{content:'';position:absolute;left:0;right:0;bottom:0;height:6px;background:repeating-linear-gradient(-45deg,#10263b 0 8px,#ffc72c 8px 16px)}.ph .mono{font-size:52px}.pimg{width:100%;height:100%;object-fit:cover;display:block}.chips select{width:auto;margin-left:auto;border-radius:30px;font-weight:700}
+.ph em{position:absolute;right:12px;top:12px;background:#fff;color:#10263b;border-radius:20px;padding:2px 10px;font:800 12px Manrope;font-style:normal}
+.cb{padding:16px 18px 18px;display:flex;flex-direction:column;gap:3px;flex:1}.cb h3{margin:0;font-size:18px}.job{color:var(--blue);font-weight:800;font-size:13px}
+.cb small{color:var(--mut)}.price{margin-top:auto;padding-top:12px;display:flex;justify-content:space-between;align-items:center}.price b{font:800 15px Unbounded,sans-serif}
+.empty{grid-column:1/-1;text-align:center;padding:50px 20px;background:var(--card);border:2px dashed var(--line);border-radius:22px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+.steps div{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;position:relative}
+.steps div:before{content:counter(s);font:800 22px Unbounded;background:var(--y);color:#10263b;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:12px}
+.steps h3{margin:0 0 4px}.steps p{margin:0;color:var(--mut);font-size:14px}
+footer{margin-top:50px;background:var(--ink);color:var(--bg);padding:28px 0;font-size:13px}footer .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.ov{position:fixed;inset:0;background:#06101ccc;z-index:50;display:grid;place-items:center;padding:16px;overflow:auto}
+.md{background:var(--card);border-radius:24px;width:100%;max-width:600px;max-height:92vh;overflow:auto;animation:pop .22s ease}
+@keyframes pop{from{opacity:0;transform:scale(.96)}}
+.mh{padding:22px 24px;display:flex;gap:16px;align-items:center}.mh .av{font-size:44px;width:76px;height:76px;border-radius:20px;display:grid;place-items:center;flex:none}
+.mh h3{margin:0;font-size:22px}.x{margin-left:auto;align-self:flex-start;border:0;background:var(--bg);width:36px;height:36px;border-radius:50%;font-size:18px}
+.mb{padding:0 24px 24px}.kv{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}.kv div{background:var(--bg);border-radius:14px;padding:10px 12px}.kv small{display:block;color:var(--mut);font-size:12px}
+.sv{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line)}.sv:last-child{border:0}
+label{display:block;font-weight:800;font-size:13px;margin:12px 0 5px}
+input:not([type=checkbox]),select,textarea{width:100%;border:1.5px solid var(--line);background:var(--bg);border-radius:12px;padding:11px 13px}
+.err{color:#d6334a;font-size:12px;font-weight:700;margin-top:4px}.est{background:var(--y);color:#10263b;border-radius:14px;padding:12px 16px;margin-top:16px;display:flex;justify-content:space-between;font-weight:800}
+.row{display:flex;gap:10px;margin-top:16px}.row .btn{flex:1}
+.ok-box{text-align:center;padding:40px 24px}.ok-box .big{font-size:56px}
+.ord{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px 20px;display:grid;grid-template-columns:60px 1fr auto;gap:16px;align-items:center;margin-bottom:12px}
+.ord .av{width:60px;height:60px;border-radius:16px;display:grid;place-items:center;font-size:30px}.ord h3{margin:0 0 2px;font-size:17px}.ord small{color:var(--mut);display:block}
+.bd{display:inline-block;border-radius:20px;padding:4px 13px;font-weight:800;font-size:12px;background:#e8eefc;color:#2150b8}.bd.s1{background:#fff1c9;color:#8a6200}.bd.s2{background:#d9f5e8;color:#127450}
+.tr{display:flex;gap:6px;margin:8px 0 2px}.tr i{height:5px;flex:1;border-radius:5px;background:var(--line)}.tr i.f{background:var(--ok)}
+.pg{padding-top:32px;min-height:60vh}.top{display:flex;justify-content:space-between;gap:12px;align-items:end;flex-wrap:wrap;margin-bottom:18px}.top select{width:auto;min-width:220px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:12px 20px;border-radius:14px;font-weight:700;z-index:99}
+@media(max-width:800px){.hero .w{grid-template-columns:1fr;padding-top:40px}.stats div:nth-child(2){transform:none}.steps{grid-template-columns:1fr}.ord{grid-template-columns:50px 1fr}.ord>:last-child{grid-column:1/-1}nav button{padding:8px 9px;font-size:13px}.logo span{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body><div id="root"></div>
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<script>
+const {useState,useEffect,useMemo}=React,h=htm.bind(React.createElement);
+const M=[
+{id:1,name:'Aziz Karimov',job:'Santexnik',e:'🔧',c:'#cfe3ff',p:80000,x:9,r:4.9,a:'Chilonzor, Yunusobod',s:[['Kran almashtirish',80000],['Quvur tozalash',120000],['Unitaz o‘rnatish',250000]]},
+{id:2,name:'Bobur Rahimov',job:'Elektrik',e:'💡',c:'#ffe9a8',p:60000,x:7,r:4.8,a:'Mirzo Ulug‘bek, Shayxontohur',s:[['Rozetka o‘rnatish',60000],['Sim tortish (1 m)',25000],['Hisoblagich ulash',150000]]},
+{id:3,name:'Dilshod Aliyev',job:'Duradgor',e:'🪚',c:'#ffd9c2',p:100000,x:12,r:4.9,a:'Sergeli, Yakkasaroy',s:[['Eshik o‘rnatish',200000],['Mebel ta’mirlash',100000],['Javon yig‘ish',350000]]},
+{id:4,name:'Sardor Qodirov',job:'Konditsioner ustasi',e:'❄️',c:'#d4f3ee',p:150000,x:6,r:4.7,a:'Yunusobod, Mirobod',s:[['Konditsioner o‘rnatish',350000],['Tozalash',150000],['Freon to‘ldirish',200000]]},
+{id:5,name:'Jasur Toshmatov',job:'Maishiy texnika ustasi',e:'🧺',c:'#e7dcff',p:90000,x:10,r:4.8,a:'Olmazor, Chilonzor',s:[['Kir yuvish mashinasi',120000],['Muzlatkich ta’miri',150000],['Changyutgich ta’miri',90000]]},
+{id:6,name:'Rustam Ergashev',job:'Pardozchi',e:'🎨',c:'#ffd3dc',p:70000,x:15,r:5.0,a:'Mirobod, Uchtepa',s:[['Devor bo‘yash (m²)',70000],['Oboy yopishtirish',90000],['Shpaklyovka (m²)',80000]]},
+{id:7,name:'Ulug‘bek Nazarov',job:'Elektrik',e:'💡',c:'#ffe9a8',p:55000,x:4,r:4.6,a:'Sergeli, Chilonzor',s:[['Lampochka/lyustra',55000],['Avtomat almashtirish',90000]]},
+{id:8,name:'Otabek Yusupov',job:'Santexnik',e:'🔧',c:'#cfe3ff',p:70000,x:5,r:4.7,a:'Yashnobod, Mirobod',s:[['Smesitel o‘rnatish',70000],['Radiator ta’miri',130000],['Boyler o‘rnatish',220000]]},
+{id:9,name:'Sherzod Mamatov',job:'Plitkachi',c:'#d9f0d0',p:90000,x:11,r:4.9,a:'Chilonzor, Olmazor',s:[['Kafel yotqizish (m²)',90000],['Vannaxona ta’miri',900000],['Plitka almashtirish',150000]]},
+{id:10,name:'Behzod Sattorov',job:'Qulf ustasi',c:'#ffe0b8',p:50000,x:8,r:4.7,a:'Yunusobod, Shayxontohur',s:[['Qulf ochish',50000],['Qulf almashtirish',120000],['Seyf ochish',300000]]},
+{id:11,name:'Komil Haydarov',job:'Payvandchi',c:'#dfe3ea',p:120000,x:13,r:4.8,a:'Sergeli, Uchtepa',s:[['Darvoza payvandlash',400000],['Panjara o‘rnatish',250000],['Kichik payvand',120000]]},
+{id:12,name:'Nodir Abdullayev',job:'Kompyuter ustasi',c:'#dcd9ff',p:60000,x:6,r:4.6,a:'Mirobod, Yakkasaroy',s:[['Windows o‘rnatish',60000],['Noutbuk tozalash',100000],['Wi-Fi sozlash',70000]]}];
+const ST=['Yangi','Qabul qilindi','Bajarildi'],JOBS=['Hammasi',...new Set(M.map(m=>m.job))];
+const fmt=n=>n.toLocaleString('ru-RU')+' so‘m';
+const load=()=>{try{return JSON.parse(localStorage.getItem('ustabor_orders'))||[]}catch(e){return[]}};
+const nowMin=()=>new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,16);
+
+const REV=[['Malika','Vaqtida keldi, ish toza bajarildi.',5],['Anvar','Narx aytilgandek bo‘ldi, tavsiya qilaman.',5],['Zilola','Muammoni tez topdi, rahmat.',4],['Jamshid','Yaxshi usta, bir oz kechikdi.',4],['Dilnoza','Juda xushmuomala va malakali.',5],['Sanjar','Ishidan mamnunman.',5]];
+function Av({m}){if(m.photo)return h`<img className="pimg" alt=${m.name} src=${m.photo}/>`;
+ const ini=m.name.split(' ').map(w=>w[0]).join('').slice(0,2);
+ return h`<div className="mono" style=${{background:m.c}} role="img" aria-label=${m.name}><span>${ini}</span></div>`}
+function Card({m,open}){return h`<button className="card" onClick=${()=>open(m)}>
+<div className="ph"><${Av} m=${m}/><em>★ ${m.r}</em></div>
+<div className="cb"><h3>${m.name}</h3><span className="job">${m.job}</span><small>${m.x} yil tajriba · ${m.a.split(',')[0]}</small>
+<div className="price"><span><small>dan</small><br/><b>${fmt(m.p)}</b></span><span className="btn y">Ko‘rish</span></div></div></button>`}
+
+function Modal({m,close,add}){
+ const [step,setStep]=useState(0),[f,setF]=useState({svc:'',problem:'',name:'',phone:'',address:'',time:''}),[er,setEr]=useState({}),
+ set=k=>e=>setF({...f,[k]:e.target.value}),sv=f.svc!==''?m.s[+f.svc]:null;
+ const send=()=>{const e={};
+  if(!sv)e.svc='Xizmat turini tanlang';
+  if(f.problem.trim().length<5)e.problem='Muammoni qisqacha yozing';
+  if(f.name.trim().length<2)e.name='Ismingizni kiriting';
+  if(f.phone.replace(/\D/g,'').length<9)e.phone='Telefon raqamini to‘liq kiriting';
+  if(f.address.trim().length<4)e.address='Manzilni kiriting';
+  if(!f.time)e.time='Kelish vaqtini tanlang';else if(f.time<nowMin())e.time='O‘tgan vaqtni tanlab bo‘lmaydi';
+  setEr(e);if(Object.keys(e).length)return;
+  add({id:Date.now(),mid:m.id,svc:sv[0],price:sv[1],...f,status:0});setStep(2)};
+ const Fe=k=>er[k]?h`<div className="err">${er[k]}</div>`:null;
+ return h`<div className="ov" onClick=${e=>e.target===e.currentTarget&&close()}><div className="md" role="dialog" aria-modal="true">
+ ${step===2?h`<div className="ok-box"><div className="big">✅</div><h2>Buyurtma yuborildi</h2><p className="sub">${m.name} buyurtmangizni ko‘rib chiqadi. Holatini “Buyurtmalarim” bo‘limida kuzating.</p><button className="btn" onClick=${close}>Yopish</button></div>`:h`
+ <div className="mh"><div className="av" ><${Av} m=${m}/></div><div><h3>${m.name}</h3><span className="job">${m.job}</span><br/><small>★ ${m.r}</small></div><button className="x" onClick=${close} aria-label="Yopish">✕</button></div>
+ <div className="mb">${step===0?h`
+  <div className="kv"><div><small>Tajriba</small>${m.x} yil</div><div><small>Boshlang‘ich narx</small>${fmt(m.p)}</div><div><small>Hudud</small>${m.a.split(',')[0]}</div></div>
+  <p style=${{margin:'0 0 10px'}}><b>Ishlaydigan hududlari:</b> ${m.a}</p>
+  <h3 style=${{margin:'14px 0 4px'}}>Xizmatlar</h3>${m.s.map(s=>h`<div className="sv" key=${s[0]}><span>${s[0]}</span><b>${fmt(s[1])}</b></div>`)}
+  <h3 style=${{margin:'18px 0 4px'}}>Mijozlar sharhi</h3>${[REV[m.id%6],REV[(m.id+2)%6]].map(r=>h`<div className="sv" key=${r[0]}><span><b>${r[0]}</b><br/><small style=${{color:'var(--mut)'}}>${r[1]}</small></span><b style=${{color:'#e5a800'}}>${'★'.repeat(r[2])}</b></div>`)}
+  <div className="row"><button className="btn g" onClick=${close}>Orqaga</button><button className="btn y" onClick=${()=>setStep(1)}>Buyurtma berish</button></div>`:h`
+  <label>Xizmat turi</label><select value=${f.svc} onChange=${set('svc')}><option value="">Tanlang…</option>${m.s.map((s,i)=>h`<option key=${i} value=${i}>${s[0]} — ${fmt(s[1])}</option>`)}</select>${Fe('svc')}
+  <label>Muammo tavsifi</label><textarea rows="3" value=${f.problem} onChange=${set('problem')} placeholder="Masalan: oshxonadagi kran oqyapti"></textarea>${Fe('problem')}
+  <label>Ismingiz</label><input value=${f.name} onChange=${set('name')}/>${Fe('name')}
+  <label>Telefon</label><input type="tel" value=${f.phone} onChange=${set('phone')} placeholder="+998 90 123 45 67"/>${Fe('phone')}
+  <label>Manzil</label><input value=${f.address} onChange=${set('address')} placeholder="Tuman, ko‘cha, uy"/>${Fe('address')}
+  <label>Kelish vaqti</label><input type="datetime-local" min=${nowMin()} value=${f.time} onChange=${set('time')}/>${Fe('time')}
+  <div className="est"><span>Taxminiy narx</span><span>${sv?fmt(sv[1]):'Xizmatni tanlang'}</span></div>
+  <div className="row"><button className="btn g" onClick=${()=>setStep(0)}>Orqaga</button><button className="btn" onClick=${send}>Yuborish</button></div>`}</div>`}
+ </div></div>`}
+
+function Orders({orders,empty}){
+ return h`<div className="w pg"><h2>Buyurtmalarim</h2><p className="sub">Barcha so‘rovlaringiz va ularning holati.</p>
+ ${orders.length===0?h`<div className="empty"><div style=${{fontSize:46}}>🧰</div><h3>Hozircha buyurtma yo‘q</h3><p className="sub">Ustani tanlab, birinchi buyurtmangizni bering.</p><button className="btn y" onClick=${empty}>Usta topish</button></div>`:
+ [...orders].reverse().map(o=>{const m=M.find(x=>x.id===o.mid);return h`<div className="ord" key=${o.id}><div className="av" ><${Av} m=${m}/></div>
+ <div><h3>${m.name} · ${o.svc}</h3><small>📍 ${o.address}</small><small>🕒 ${o.time.replace('T',' ')} · ${o.problem}</small>
+ <div className="tr">${ST.map((_,i)=>h`<i key=${i} className=${i<=o.status?'f':''}/>`)}</div></div>
+ <div style=${{textAlign:'right'}}><span className=${'bd s'+o.status}>${ST[o.status]}</span><br/><b>${fmt(o.price)}</b></div></div>`})}</div>`}
+
+function Panel({orders,setOrders,toast}){
+ const [mid,setMid]=useState(1),list=orders.filter(o=>o.mid===mid),m=M.find(x=>x.id===mid);
+ const next=o=>{setOrders(orders.map(x=>x.id===o.id?{...x,status:x.status+1}:x));toast('Holat: '+ST[o.status+1])};
+ return h`<div className="w pg"><div className="top"><div><h2>Usta paneli</h2><p className="sub" style=${{margin:0}}>Usta sifatida kirib, buyurtmalar holatini boshqaring.</p></div>
+ <select value=${mid} onChange=${e=>setMid(+e.target.value)} aria-label="Ustani tanlang">${M.map(x=>h`<option key=${x.id} value=${x.id}>${x.name} — ${x.job}</option>`)}</select></div>
+ ${list.length===0?h`<div className="empty"><div style=${{fontSize:46}}>📭</div><h3>${m.name} uchun buyurtma yo‘q</h3><p className="sub">Mijoz buyurtma bergach, shu yerda paydo bo‘ladi.</p></div>`:
+ [...list].reverse().map(o=>h`<div className="ord" key=${o.id}><div className="av" style=${{background:m.c,fontWeight:800,fontSize:24}}>${o.name[0].toUpperCase()}</div>
+ <div><h3>${o.name} · ${o.svc}</h3><small>📞 ${o.phone} · 📍 ${o.address}</small><small>🕒 ${o.time.replace('T',' ')} · ${o.problem}</small></div>
+ <div style=${{textAlign:'right'}}><span className=${'bd s'+o.status}>${ST[o.status]}</span><br/>${o.status<2?h`<button className="btn ok" style=${{marginTop:8}} onClick=${()=>next(o)}>${o.status===0?'Qabul qilish':'Bajarildi'}</button>`:h`<b>✓ Yakunlandi</b>`}</div></div>`)}</div>`}
+
+function App(){
+ const [view,setView]=useState('home'),[orders,setOrders]=useState(load),[q,setQ]=useState(''),[job,setJob]=useState('Hammasi'),[sel,setSel]=useState(null),[t,setT]=useState(''),[sort,setSort]=useState('def');
+ useEffect(()=>{try{localStorage.setItem('ustabor_orders',JSON.stringify(orders))}catch(e){}},[orders]);
+ const toast=m=>{setT(m);setTimeout(()=>setT(''),2200)};
+ const list=useMemo(()=>M.filter(m=>(job==='Hammasi'||m.job===job)&&m.name.toLowerCase().includes(q.trim().toLowerCase())).sort((a,b)=>sort==='r'?b.r-a.r:sort==='p'?a.p-b.p:sort==='x'?b.x-a.x:a.id-b.id),[q,job,sort]);
+ const go=v=>{setView(v);window.scrollTo(0,0)};
+ const scrollTo=()=>document.getElementById('ustalar').scrollIntoView({behavior:'smooth'});
+ return h`<div>
+ <header><div className="w"><button className="logo" onClick=${()=>go('home')}><i>🛠️</i><span>Ustabor</span></button>
+ <nav><button className=${view==='home'?'on':''} onClick=${()=>go('home')}>Ustalar</button>
+ <button className=${view==='orders'?'on':''} onClick=${()=>go('orders')}>Buyurtmalarim${orders.length?h`<b>${orders.length}</b>`:null}</button>
+ <button className=${view==='panel'?'on':''} onClick=${()=>go('panel')}>Usta paneli</button></nav></div></header>
+ ${view==='home'?h`<main>
+ <div className="hero"><div className="w"><div><h1>Uyingizdagi har bir muammoga usta bor.</h1>
+ <p>Santexnik, elektrik, duradgor va boshqa tekshirilgan ustalar. Tanlang, buyurtma bering — usta o‘zi keladi.</p>
+ <div className="sb"><input value=${q} onChange=${e=>setQ(e.target.value)} placeholder="Usta ismini yozing…" aria-label="Usta qidirish"/><button onClick=${scrollTo}>Usta topish</button></div></div>
+ <div className="stats"><div><strong>${M.length}+</strong><span>tekshirilgan usta</span></div><div><strong>${M.reduce((a,m)=>a+m.s.length,0)}</strong><span>xizmat turi</span></div><div><strong>4.8</strong><span>o‘rtacha baho</span></div><div><strong>${orders.length}</strong><span>sizning buyurtmalaringiz</span></div></div></div></div>
+ <div className="w"><section className="s" id="ustalar"><h2>Ustalar ro‘yxati</h2><p className="sub">Kasbni tanlang yoki ismi bo‘yicha qidiring.</p>
+ <div className="chips">${JOBS.map(j=>h`<button key=${j} className=${'chip'+(job===j?' on':'')} aria-pressed=${job===j} onClick=${()=>setJob(j)}>${j}</button>`)}<select value=${sort} onChange=${e=>setSort(e.target.value)} aria-label="Saralash"><option value="def">Saralash: odatiy</option><option value="r">Reyting bo‘yicha</option><option value="p">Arzonroq avval</option><option value="x">Tajriba bo‘yicha</option></select></div>
+ <div className="grid">${list.length?list.map(m=>h`<${Card} key=${m.id} m=${m} open=${setSel}/>`):h`<div className="empty"><div style=${{fontSize:46}}>🔍</div><h3>Hech narsa topilmadi</h3><p className="sub">Boshqa ism yozing yoki kasbni “Hammasi”ga qaytaring.</p><button className="btn y" onClick=${()=>{setQ('');setJob('Hammasi')}}>Filtrni tozalash</button></div>`}</div></section>
+ <section className="s"><h2>Qanday ishlaydi?</h2><p className="sub">Uch qadamda usta chaqiring.</p><div className="steps">
+ <div><h3>Ustani tanlang</h3><p>Kasb, tajriba va narx bo‘yicha o‘zingizga mosini toping.</p></div>
+ <div><h3>Buyurtma bering</h3><p>Xizmat, muammo, manzil va qulay vaqtni yozing.</p></div>
+ <div><h3>Holatni kuzating</h3><p>Yangi, Qabul qilindi, Bajarildi — hammasi “Buyurtmalarim”da.</p></div></div></section></div></main>`:null}
+ ${view==='orders'?h`<${Orders} orders=${orders} empty=${()=>go('home')}/>`:null}
+ ${view==='panel'?h`<${Panel} orders=${orders} setOrders=${setOrders} toast=${toast}/>`:null}
+ <footer><div className="w"><span>Ustabor · Demo Day 2026</span><span>Ma’lumotlar shu brauzerda (localStorage) saqlanadi</span></div></footer>
+ ${sel?h`<${Modal} m=${sel} close=${()=>setSel(null)} add=${o=>{setOrders([...orders,o]);toast('Buyurtma yuborildi')}}/>`:null}
+ ${t?h`<div className="toast" role="status">${t}</div>`:null}</div>`}
+ReactDOM.createRoot(document.getElementById('root')).render(h`<${App}/>`);
+</script></body></html>
